@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured academic writing system, which can be used to manager clients, writers and manage finance.">
+    <meta name="author" content="Coderthemes">
+    <meta name="csrf-token" content="qtXSQwR5tKtIbAUpsSLJi94IXUpXj1eP6H9Zqkl0">
+    <link rel="shortcut icon" href="https://acemypapers.com/backend/assets/images/favicon.ico">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename ='js/calc.js') }}"></script>
+    <title>{{ title }}</title>
+    <link href="{{ url_for('static', filename ='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename= 'css/core.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="{{ url_for('static', filename ='css/icons.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename ='css/pages.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename ='css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename ='css/responsive.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://acemypapers.com/backend/assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="fixed-left">
+    {% include 'nav2.html' %} {% block body %} {% endblock %}
+
+
+
+
+    <script>
+        var resizefunc = [];
+        $(window).load(function() {
+            getValuesfromFields();
+            calculateTotal();
+        });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/59e5eb45c28eca75e4626812/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- jQuery  -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/detect.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/fastclick.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.blockUI.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/waves.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.dashboard.js') }}"></script>
+    <!-- App js -->
+    <script src="{{ url_for('static', filename ='js/jquery.core.js') }}"></script>
+    <script src="{{ url_for('static', filename ='js/jquery.app.js') }}"></script>
+</body>
+
+</html>
