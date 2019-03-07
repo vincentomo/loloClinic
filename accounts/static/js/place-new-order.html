@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A fully featured academic writing system, which can be used to manager clients, writers and manage finance.">
+		<meta name="author" content="Coderthemes">
+
+		<meta name="csrf-token" content="qtXSQwR5tKtIbAUpsSLJi94IXUpXj1eP6H9Zqkl0">
+		<link rel="shortcut icon" href="https://acemypapers.com/backend/assets/images/favicon.ico">
+	<title>Dashboard | Ace Mypapers</title>
+		<link href="https://acemypapers.com/backend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/core.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/components.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/icons.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/pages.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/menu.css" rel="stylesheet" type="text/css" />
+		<link href="https://acemypapers.com/backend/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	</head>
+
+
+	<body class="fixed-left">
+
+		
+
+		<!-- Begin page -->
+		<div id="wrapper">
+
+			<!-- Top Bar Start -->
+			<div class="topbar">
+
+				<!-- LOGO -->
+				<div class="topbar-left">
+					<a href="/myaccount" class="logo"><span>Ace<span>mypapers</span></span><i class="mdi mdi-cube"></i><!--<img src="https://acemypapers.com/backend/assets/images/logo.png" alt="" height="30">--></a>
+				</div>
+
+				<!-- Button mobile view to collapse sidebar menu -->
+				<div class="navbar navbar-default" role="navigation">
+					<div class="container">
+
+						<!-- Navbar-left -->
+						<ul class="nav navbar-nav navbar-left">
+							<li>
+								<button class="button-menu-mobile open-left waves-effect waves-light">
+									<i class="mdi mdi-menu"></i>
+								</button>
+							</li>
+							
+							
+						</ul>
+
+						<!-- Right(Notification) -->
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown navbar-c-items">
+								<a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+									<i class="mdi mdi-email"></i>
+									<span class="badge up bg-danger">0</span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list" style="
+								
+								float:left;
+width:300px;
+overflow-y: auto;
+height: 500px;">
+									<li class="text-center">
+										<h5><u>Messages</u></h5>
+									</li>
+									                       
+									<li class="all-msgs text-center">
+										<p class="m-0"><a href="/messages">See all Messages</a></p>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown navbar-c-items">
+								<a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+									<i class="mdi mdi-bell"></i>
+									<span class="badge up bg-success">0</span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list" style="
+								
+								float:left;
+width:300px;
+overflow-y: auto;
+height: 500px;">
+									<li class="text-center">
+										<h5>Notifications</h5>
+									</li>
+																																				
+									
+									<li class="all-msgs text-center">
+										<p class="m-0"><a href="/notifications">See all Notification</a></p>
+									</li>
+								</ul>
+							</li>
+
+
+							<li class="dropdown user-box">
+								<a href="#" class="dropdown-toggle waves-effect waves-light user-link" data-toggle="dropdown" aria-expanded="true">
+									<img src="https://acemypapers.com/backend/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
+									<li class="text-center">
+										<h5>Welcome, Vincentomo</h5>
+									</li>
+									<li><a href="/myprofile"><i class="ti-user m-r-5"></i> Profile</a></li>
+																											
+									<li> <a  href="https://acemypapers.com/logout" 
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+											<i class="ti-power-off m-r-5"></i> Logout
+							
+										</a>
+
+										<form id="logout-form" action="https://acemypapers.com/logout" method="POST" style="display: none;">
+											<input type="hidden" name="_token" value="qtXSQwR5tKtIbAUpsSLJi94IXUpXj1eP6H9Zqkl0">
+										</form></li>
+									
+								</ul>
+
+							</li>
+
+						</ul> <!-- end navbar-right -->
+
+					</div><!-- end container -->
+				</div><!-- end navbar -->
+			</div>
+			<!-- Top Bar End -->
+
+
+			<!-- ========== Left Sidebar Start ========== -->
+			<div class="left side-menu">
+				<div class="sidebar-inner slimscrollleft">
+
+					<!--- Sidemenu -->
+					<div id="sidebar-menu">
+						<ul >
+                      
+							<li>
+								<a href="/myaccount" >
+									<i class="fa fa-dashboard"></i> <span >Dashboard</span>
+            
+								</a>
+							</li>
+        
+							      
+        
+																					<li>
+								<a href="/place-new-order" >
+									<i class="fa fa-edit"></i>
+									<span class="btn btn-warning">    Order Now <span class="badge badge-warning pull-right" style="margin-right:10px;"></span> </span>
+								</a>
+							</li>
+							<li>
+								<a href="/available-orders" >
+          
+									<i class="fa fa-check" aria-hidden="true"></i><span>Orders in Progress <span class="badge badge-warning pull-right" style="margin-right:10px;">0</span> </span>
+								</a>
+							</li>
+          
+             
+																												<!-- <li>
+							<a href="/orders-disputed">
+							<i class="fa fa-pencil-square-o"></i> <span>Disputes</span>
+            
+							</a>
+							</li>-->
+														<li>
+								<a href="/orders-approved" >
+									<i class="fa fa-trophy" aria-hidden="true"></i> <span>Completed <span class="badge  pull-right" style="margin-right: 10px;">0</span></span>
+            
+								</a>
+							</li>
+																					<li>
+								<a href="/canceled-orders" >
+									<i class="fa fa-close" aria-hidden="true"></i> <span>Canceled <span class="badge badge-danger pull-right" style="margin-right: 10px;">0</span></span>
+            
+								</a>
+							</li>
+														<!-- <li>
+							<a href="/active-disputes" >
+							<i class="fa fa-frown-o" aria-hidden="true"></i> <span>Disputes <span class="badge badge-danger pull-right" style="margin-right: 10px;">0</span></span>
+            
+							</a>
+							</li>-->
+         
+       
+							<!--</ul>
+							</li>-->
+							        
+        
+        
+							<li>
+								<a href="/messages" >
+									<i class="fa fa-envelope"></i> <span>Messages <span class="badge badge-success pull-right" style="margin-right: 10px;">0</span></span>
+           
+								</a>
+							</li>
+         
+     
+        
+    
+      
+        
+						</ul>
+					</div>
+					<!-- Sidebar -->
+					<div class="clearfix"></div>
+
+					<div class="help-box">
+						<h5 class="text-muted m-t-0">For Help ?</h5>
+						<p class=""><span class="text-dark"><b>Email:</b></span> <br/> admin@acemypapers.com</p>
+						<p class="m-b-0"><span class="text-dark"><b>Call:</b></span> <br/> +254 791 802 300</p>
+					</div>
+
+				</div>
+				<!-- Sidebar -left -->
+
+			</div>
+			<!-- Left Sidebar End -->
+
+
+
+			<!-- ============================================================== -->
+			<!-- Start right Content here -->
+			<!-- ============================================================== -->
+			<div class="content-page">
+				<!-- Start content -->
+				<div class="content">
+					<div class="container" style="background-color: #fff;">
+						 <style>
+ 	@media (max-width: 768px) {
+   #smallId {
+    margin-left: 40px;
+  }
+}
+@media (min-width: 991px) {
+  #smallId {
+    margin-left: 40px;
+  }
+}
+#bgimage{
+ 	background:url('../../../img/benner_bg.jpg')no-repeat;
+	background-size:cover;
+	height:500px;
+	background:url('../../../img/benner_bg.jpg') no-repeat;background-size:cover;
+	
+}
+.bener_content{
+    padding:135px 0;
+   
+    color:#fff;
+
+}
+.verticalLine {
+  border-left: 1px solid #bcbcbc;
+}
+
+#benefits{
+	background:#ff0000;
+	height:70px;
+	width:70px;
+	border-style: solid;
+	border-radius: 50%;
+	text-align: center;
+	
+	border-color:1px solid #bcbcbc; 
+}
+
+
+/*$$$$$$$$$$$$$$$$$$$$4order form calculator styling%%%%%%%%%%%%%%%%%%%%%%%*/
+
+/*
+ * jQuery / jqLite Wizard Plugin
+ * version: 0.0.7
+ * Author: Girolamo Tomaselli http://bygiro.com
+ *
+ * Copyright (c) 2013 G. Tomaselli
+ * Licensed under the MIT license.
+ */
+
+@font-face {
+	font-family: 'wizard-font';
+	font-weight: normal;
+	font-style: normal;
+	src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SDGQAAAC8AAAAYGNtYXD6RMuEAAABHAAAAGRnYXNwAAAAEAAAAYAAAAAIZ2x5Zh39Yw4AAAGIAAAArGhlYWQGSx/bAAACNAAAADZoaGVhB8MDxwAAAmwAAAAkaG10eA9/ACAAAAKQAAAAHGxvY2EAbgCcAAACrAAAABBtYXhwAAkACQAAArwAAAAgbmFtZZ+vDy0AAALcAAABtnBvc3QAAwAAAAAElAAAACAAAwLgAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADwWgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQASAAAAA4ACAACAAYAAQAg6jTqOPBa//3//wAAAAAAIOo06jjwWv/9//8AAf/jFdAVzQ+sAAMAAQAAAAAAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAA/+AD4AOgAAYAAAkBESERIRED4P4g/gACAAHAAeD+4P6A/uAAAAEAIP/gBAADoAAGAAATAREhESERIAHgAgD+AAHA/iABIAGAASAAAAABAAAAQAGAA0AAAwAAEwkBEQABgP6AA0D+gP6AAwAAAAEAAAABAAB0IT+bXw889QALBAAAAAAA0ZXtrwAAAADRle2vAAD/4AQAA6AAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAP//BAAAAQAAAAAAAAAAAAAAAAAAAAcEAAAAAAAAAAAAAAACAAAABAAAAAQAACABfwAAAAAAAAAKABQAHgAyAEYAVgABAAAABwAHAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEACwAAAAEAAAAAAAIABwCEAAEAAAAAAAMACwBCAAEAAAAAAAQACwCZAAEAAAAAAAUACwAhAAEAAAAAAAYACwBjAAEAAAAAAAoAGgC6AAMAAQQJAAEAFgALAAMAAQQJAAIADgCLAAMAAQQJAAMAFgBNAAMAAQQJAAQAFgCkAAMAAQQJAAUAFgAsAAMAAQQJAAYAFgBuAAMAAQQJAAoANADUd2l6YXJkLWZvbnQAdwBpAHoAYQByAGQALQBmAG8AbgB0VmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwd2l6YXJkLWZvbnQAdwBpAHoAYQByAGQALQBmAG8AbgB0d2l6YXJkLWZvbnQAdwBpAHoAYQByAGQALQBmAG8AbgB0UmVndWxhcgBSAGUAZwB1AGwAYQByd2l6YXJkLWZvbnQAdwBpAHoAYQByAGQALQBmAG8AbgB0Rm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('truetype');
+}
+
+[class^="wiz-icon-"], [class*=" wiz-icon-"] {
+	font-family: 'wizard-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wiz-icon-chevron-right:before {
+	content: "\f05a";
+    font-size: 64px;
+    position: absolute;
+}
+.wiz-icon-arrow-right:before {
+	content: "\ea34";
+	margin-left: 4px;
+}
+.wiz-icon-arrow-left:before {
+	content: "\ea38";
+	margin-right: 4px;
+}
+
+.wizard {
+	border: 1px solid #d4d4d4;
+}
+
+.wizard .steps-index-container {
+	position: relative;
+	overflow: hidden;	
+}
+
+.wizard .steps-content{
+	border-top: 1px solid #d4d4d4;
+}
+
+.wizard ul.steps {
+	padding: 0;
+	margin: 0;
+	width: 5000px;
+	position:relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.wizard ul.steps > li{
+	height: 46px;
+	line-height: 46px;
+	display: table-cell;
+	list-style: none outside none;
+	padding: 0;
+	margin: 0;
+	background: #ededed;
+	color: #b5b5b5;
+	position: relative;
+}
+
+.wizard ul.steps > li.active {
+	background-color: #F1F6FC;
+	color: #337ab7;
+}
+
+.wizard ul.steps > li.completed {
+	cursor: pointer;
+	background-color: #EFF9F0;
+	color: #5cb85c;
+}
+
+.wizard ul.steps > li > span{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.wizard ul.steps > li .step-index {
+	padding-left: 30px;
+	padding-right: 5px;
+}
+
+.wizard ul.steps > li .step-text {
+	padding-right: 5px;
+}
+
+.wizard ul.steps > li .step-index .label {
+	background-color: #b5b5b5;
+}
+
+.wizard ul.steps > li.active .step-index .label {
+	background-color: #337ab7;
+}
+
+.wizard ul.steps > li.completed .step-index .label {
+	background-color: #5cb85c;
+}
+
+.wizard ul.steps > li:first-child .step-index {
+	padding-left: 10px;
+}
+
+.wizard .top-actions {
+	z-index: 99;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 46px;
+	height: 46px;
+	float: right;
+	vertical-align: middle;
+	background-color: #e5e5e5;
+	border-left: 1px solid #d4d4d4;
+	padding: 0 10px;
+	display: table;
+	box-shadow: -3px 0 2px -1px #888;
+	-webkit-box-shadow: -3px 0 2px -1px #888;
+	-moz-box-shadow: -3px 0 2px -1px #888;
+	-o-box-shadow: -3px 0 2px -1px #888;
+}
+
+.wizard .top-actions .btn-group {
+	display: table-cell;
+	vertical-align: middle;
+}
+.wizard .bottom-actions {
+	width: 100%;
+	display: table;
+}
+
+.wizard .left-actions,
+.wizard .right-actions {
+	display: table-cell;
+	width: 50%;
+}
+
+.wizard .left-actions{
+	text-align: left;
+}
+
+.wizard .right-actions {
+	text-align: right;
+}
+
+
+.wizard .bottom-actions .btn-next,
+.wizard .bottom-actions .btn-prev {
+	margin: 10px;
+}
+
+.wizard .steps-content .step-pane:not(.active){
+	display: none;
+}
+
+.wizard .steps-content .step-pane{
+	padding: 10px;
+}
+
+.wizard .btn-next,
+.wizard .btn-prev {
+	white-space: nowrap;
+}
+
+.wizard .btn-next:not(.final-step) .finished-text {
+	display: none;
+}
+
+.wizard .btn-next.final-step .next-text,
+.wizard .btn-next.final-step .wiz-icon-arrow-right {
+	display: none;
+}
+
+.wizard .wiz-icon-chevron-right.colorA::before {
+    right: -23px;
+    top: -9.5px;
+	z-index: 2;
+    color: #ededed;
+}
+
+.wizard .wiz-icon-chevron-right.colorB::before {
+    right: -24px;
+    top: -9.5px;
+	z-index: 1;
+	color: #b5b5b5;
+}
+
+.wizard li.active .wiz-icon-chevron-right.colorA::before {
+	color: #f1f6fc;
+}
+
+.wizard li.completed .wiz-icon-chevron-right.colorA::before {
+	color: #EFF9F0;
+}
+
+
+
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			New Order
+			
+		</h1>
+	
+	</section>
+
+
+		
+				<div class="col-md-1"></div>
+				<div class="col-md-10 col-sm-12" >
+										<div data-wizard-init style="padding-right: 30px; padding-left:20px;">
+					
+								
+							<form class="form-horizontal" id="cakeform" enctype="multipart/form-data" role="form" method="POST" action="/postproject" >
+								<input type="hidden" name="_token" value="qtXSQwR5tKtIbAUpsSLJi94IXUpXj1eP6H9Zqkl0">
+									
+								<div data-step="1" >
+									
+									
+									
+										<div class="row">
+										
+								<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+										<label class="col-sm-4 col-md-4 control-label" >Academic level : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Please select the option that is closest to your next obtainable degree."></span></label>
+    
+									
+      
+										<div class="col-sm-8 col-md-8 control-label" >
+											<select id="academicL" onchange="getValuesfromFields();calculateTotal();" name='levelselect' required="true" class="form-control">
+												<option value="College">College</option>
+												<option value="University">Under-graduate</option>
+												<option value="Masters">Masters</option>
+												<option value="PhD">PhD</option>
+												</select>
+										</div>
+										</div>
+										</div>
+										<div class="col-md-6 col-sm-12">
+										<div class="form-group">
+										<label class="col-sm-4 col-md-4 control-label" >Deadline: <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Please select the option that is closest to your next obtainable degree."></span></label>
+										<div class="col-sm-8 col-md-8 control-label" >
+											<select id="deadline" onchange="getValuesfromFields();calculateTotal();" name='filling' required="true" class="form-control">
+												<option value="8">8 Hours</option>
+												<option value="24">24 Hours</option>
+												<option value="48">48 Hours</option>
+												<option value="3">3 days</option>
+												<option value="5"> 5 days</option>
+												<option value="7">7 days</option>
+												<option value="10"> 10 days</option>
+												<option value="12">  12 days</option>
+												</select>
+										</div>
+										</div>
+										</div>													
+									</div>
+										<div class="row">
+										
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="col-sm-4 control-label" >Type of paper : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="If the required type of paper is missing, feel free to pick “other” and write your specific             type of paper in the appeared tab."></span></label>
+										<div class="col-sm-8">
+											<select id="type" onchange="getValuesfromFields();" name='papertype' required="true" class="form-control">
+												<option value="Admission Services - Admission Essay">Admission Services - Admission Essay</option>
+												<option value="Admission Services - Editing">Admission Services - Editing</option>
+												<option value="Admission Services - Personal Statement">Admission Services - Personal Statement</option>
+												<option value="Admission Services - Scholarship Essay">Admission Services - Scholarship Essay</option>
+												<option value="Annotated Bibliography">Annotated Bibliography</option>
+												<option value="Article Critique">Article Critique</option>
+												<option value="Article">Article</option>
+												<option value="Book Review">Book Review</option>
+												
+												<option value="Case Study">Case Study</option>
+												<option value="Coursework">Coursework</option>
+												<option value="Dissertation Chapter - Abstract">Dissertation Chapter - Abstract</option>
+												<option value="Dissertation Chapter - Discussion">Dissertation Chapter - Discussion</option>
+												<option value="Dissertation Chapter - Introduction Chapter">Dissertation Chapter - Introduction Chapter</option>
+												<option value="Dissertation Chapter - Literature Review">Dissertation Chapter - Literature Review</option>
+												<option value="Dissertation Chapter - Methodology">Dissertation Chapter - Methodology</option>
+												<option value="Dissertation Chapter - Results">Dissertation Chapter - Results</option>
+												<option value="Dissertation Services - Editing">Dissertation Services - Editing</option>
+												<option value="Dissertation Services - Proofreading">Dissertation Services - Proofreading</option>
+												<option value="Dissertation">Dissertation</option>
+												<option value="Editing">Editing</option>
+												<option selected='selected' value="Essay">Essay</option>
+												<option value="Formatting">Formatting</option>
+												<option value="Lab Report">Lab Report</option>
+												<option value="Math Problem">Math Problem</option>
+												<option value="Movie Review">Movie Review</option>
+												<option value="Multiple Choice Questions (None-Time-Framed)">Multiple Choice Questions (None-Time-Framed)</option>
+												<option value="Other (Not listed)">Other (Not listed)</option>
+												<option value="PowerPoint Presentation">PowerPoint Presentation</option>
+												<option value="Proofreading">Proofreading</option>
+												<option value="Reaction Paper">Reaction Paper</option>
+												<option value="Research Paper">Research Paper</option>
+												<option value="Research Proposal">Research Proposal</option>
+												<option value="Speech Presentation">Speech Presentation</option>
+												<option value="Statistics Project">Statistics Project</option>
+												<option value="Term Paper">Term Paper</option>
+												<option value="Thesis Proposal">Thesis Proposal</option>
+												<option value="Thesis">Thesis</option>
+											</select>
+										</div>
+									</div>
+									</div>
+
+ 
+
+ 
+	<div class="col-md-6 col-sm-12">
+    
+									<div class="form-group">
+										<label class="col-sm-4 control-label">Subjects : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="If the required subject is missing, feel free to pick “other” and write your specific subject in the appeared tab."></span></label>
+										<div class="col-sm-8">
+											<select id="subjects" name='subjects'
+    onchange="calculateTotal();getValuesfromFields()" class="form-control" required="true">
+    
+											
+										
+												
+												
+												<option value="Accounting">Accounting</option>
+												<option value="Advertising">Advertising</option>
+												<option value="Aeronautics">Aeronautics</option>
+												<option value="African-American Studies">African-American Studies</option>
+												<option value="Agricultural Studies">Agricultural Studies</option>
+												<option value="Alternative Medicine">Alternative Medicine</option>
+												<option value="American History">American History</option>
+												<option value="American Literature">American Literature</option>
+												<option value="Anthropology">Anthropology</option>
+												<option value="Antique Literature">Antique Literature</option>
+												<option value="Application Essay">Application Essay</option>
+												<option value="Architecture">Architecture</option>
+												<option value="Arts">Arts</option>
+												<option value="Asian Literature">Asian Literature</option>
+												<option value="Asian Studies">Asian Studies</option>
+												<option value="Astronomy">Astronomy</option>
+												<option value="Aviation">Aviation</option>
+												<option value="Biology">Biology</option>
+												<option value="Business">Business</option>
+												<option value="Canadian Studies">Canadian Studies</option>
+												<option value="Case Study" > Case Study</option>
+												<option value="Chemistry">Chemistry</option>
+												<option value="Communication Strategies">Communication Strategies</option>
+												<option value="Communications and Media">Communications and Media</option>
+												<option value="Company Analysis">Company Analysis</option>
+												<option value="Computer Science">Computer Science</option>
+												<option value="Creative writing">Creative writing</option>
+												<option value="Criminology">Criminology</option>
+												<option value="Dance">Dance</option>
+												<option value="Design Analysis">Design Analysis</option>
+												<option value="Drama">Drama</option>
+												<option value="East European Studies">East European Studies</option>
+												<option value="E-Commerce">E-Commerce</option>
+												<option value="Economics">Economics</option>
+												<option value="Education Theories">Education Theories</option>
+												<option value="Education" >Education</option>
+												<option value="Engineering">Engineering</option>
+												<option value="English Literature">English Literature</option>
+												<option value="English">English</option>
+												<option value="Environmental Issues">Environmental Issues</option>
+												<option value="Ethics">Ethics</option>
+												<option value="Finance">Finance</option>
+												<option value="Geography">Geography</option>
+												<option value="Geology">Geology</option>
+												<option value="Healthcare">Healthcare</option>
+												<option value="History">History</option>
+												<option value="Holocaust">Holocaust</option>
+												<option value="Internet">Internet</option>
+												<option value="Investment">Investment</option>
+												<option value="IT Management">IT Management</option>
+												<option value="Journalism">Journalism</option>
+												<option value="Latin-American Studies">Latin-American Studies</option>
+												<option value="Law">Law</option>
+												<option value="Legal Issues">Legal Issues</option>
+												<option value="Linguistics">Linguistics</option>
+												<option value="Literature">Literature</option>
+												<option value="Logistics">Logistics</option>
+												<option value="Management">Management</option>
+												<option value="Marketing">Marketing</option>
+												<option value="Mathematics">Mathematics</option>
+												<option value="Medicine and Health">Medicine and Health</option>
+												<option value="Movies">Movies</option>
+												<option value="Music">Music</option>
+												<option value="Native-American Studies">Native-American Studies</option>
+												<option value="Nature">Nature</option>
+												<option value="Nursing">Nursing</option>
+												<option value="Nutrition">Nutrition</option>
+												<option value="Paintings">Paintings</option>
+												<option value="Pedagogy">Pedagogy</option>
+												<option value="Pharmacology">Pharmacology</option>
+												<option value="Philosophy">Philosophy</option>
+												<option value="Physics">Physics</option>
+												<option value="Political Science">Political Science</option>
+												<option value="Psychology">Psychology</option>
+												<option value="Public Relations">Public Relations</option>
+												<option value="Religion and Theology">Religion and Theology</option>
+												<option value="Shakespeare Studies">Shakespeare Studies</option>
+												<option value="Sociology">Sociology</option>
+												<option value="Sport">Sport</option>
+												<option value="Teacher's Career">Teacher's Career</option>
+												<option value="Technology">Technology</option>
+												<option value="Theatre">Theatre</option>
+												<option value="Tourism">Tourism</option>
+												<option value="Trade">Trade</option>
+												<option value="Web Design">Web Design</option>
+												<option value="West European Studies">West European Studies</option>
+												
+
+    
+											</select>
+										</div>
+									</div>
+									</div>
+									</div>
+									
+									
+									<p></p>
+									<div class="form-group">
+										<label class="col-sm-3 control-label" >Topic : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Please provide us with a clear topic of your assignment (up to 300 Characters). If you don’t have a specific topic, use the default writer’s choice option."></span></label>
+										<div class="col-sm-9">
+											<p id="topicempty" style="color: red; font-size:11px;"></p>
+										
+											<input type="text" onclick="calculateTotal();cleartopic();"  id="ordertopic" onkeyup="getValuesfromFields()"  class="form-control" name="topic" min="1" placeholder="" required >
+					
+																				
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label" >Paper instructions : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Ensure the paper instruction are as clear and detailed as possible. This will help our team to come up with a quality paper."></span></label>
+										<div class="col-sm-9">
+											<p id="instructionempty" style="color: red; font-size:11px;"></p>
+											<textarea class="form-control" placeholder="Instructions and paper description... " rows="5" name="paperInstructions" required onclick="calculateTotal();getTextareaC();clearinstruction();getValuesfromFields();" onkeyup="getValuesfromFields();getTextareaC();"  id="paperInstructions"></textarea>
+					<input type="hidden" name="inputType" id="inputType"/>
+																					</div>
+									</div>
+									
+									
+									
+									<div class="row">
+										
+								<div class="col-md-6 col-sm-12">
+								<div class="form-group">
+										<label for="academic" class="col-sm-6 col-md-6 control-label">Sources to Cite : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="This number of entries will be in your reference list or bibliography page."></span>
+										</label>
+										<div class="col-md-6 col-sm-6">
+								
+		
+											<div class="input-group" style="width: 120px;">
+												<span class="input-group-btn">
+													<button onclick="sourcedown();calculateTotal();getValuesfromFields()" type="button" class="btn btn-default">-</button>
+												</span>
+												<input type="text" id="sources" class="form-control" name="sources" min="1" placeholder="" value="1" >
+												<span class="input-group-btn">
+													<button onclick="sourceup();calculateTotal();getValuesfromFields()" type="button" class="btn btn-default">+</button>
+												</span>
+											</div>
+			
+										</div>
+																				
+	
+	
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12">
+								<label  class="col-sm-6 col-md-6 control-label">Paper format : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Format or your in-text citations, references and title page."></span></label>
+								<div class="col-sm-6 col-md-6">
+								<select id="deadline" onchange="getValuesfromFields();calculateTotal();" name='writing_style' required="true" class="form-control"  style="width: 180px;">
+												<option value="APA">APA</option>
+												<option value="MLA">MLA</option>
+												<option value="Turabian/Chicago">Turabian/Chicago</option>
+												<option value="Harvard">Harvard</option>
+												<option value="Not Applicable">Not Applicable</option>
+												
+										</select>
+							
+								</div>
+								</div>
+								</div>
+								
+									
+									
+									
+									
+									
+								</div>
+								<div data-step="2">
+									
+									<hr />
+									
+								<div class="row" id="smallId">
+										
+								<div class="col-md-4 col-sm-12">	
+									<div class="form-group" >
+									
+										<label for="academic" class="col-md-6 col-sm-6 control-label">Pages : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Select the number of pages needed excluding the title page and the reference page. Double spaced pages contain approximately 275 words each, while single-spaced have 550.""></span>
+										</label>
+										<div class="row">
+											<div class="col-md-6 col-sm-6 " >
+								
+		
+												<div class="input-group" style="width: 120px;">
+													<span class="input-group-btn">
+														<button onclick="downbuttonClick();calculateTotal();clearErrors();getValuesfromFields();" type="button" class="btn btn-default">-</button>
+													</span>
+													<input type="text" class="form-control" onkeyup="calculateTotal();getValuesfromFields();clearErrors();" onchange="checkWords(); " name="pages" id="inc"  min="0" value="1" required>
+													<span class="input-group-btn">
+														<button onclick="upbuttonClick();calculateTotal();getValuesfromFields();clearErrors();" type="button" class="btn btn-default">+</button>
+													</span>
+												</div>
+												<label id="wordcount"></label>
+											</div>
+										
+										</div>
+																				
+	
+	
+									</div>
+									</div>
+									<div class="col-md-4 col-sm-12">	
+									<div class="form-group" >
+										<label for="academic" class="col-sm-6 col-md-7  control-label">Power Point slides : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Number of power point slides that will be delivered to you separately from your paper. Useful for those who need to present in front of class."></span>
+										</label>
+										<div class="col-md-5 col-sm-6">
+								
+		
+											<div class="input-group"style="width: 120px;" >
+												<span class="input-group-btn">
+													<button onclick="slidesdown();calculateTotal();clearErrors();getValuesfromFields();" type="button" class="btn btn-default">-</button>
+												</span>
+												<input type="text" class="form-control" onkeyup="calculateTotal();getValuesfromFields();clearErrors();"  name="slides" placeholder="Search for..." id="slides" value="0" min="0" required>
+												<span class="input-group-btn">
+													<button onclick="slidesup();calculateTotal();getValuesfromFields();clearErrors();" type="button" class="btn btn-default">+</button>
+												</span>
+											</div>
+			
+										</div>
+																				
+	
+	
+									</div>
+									</div>
+									<div class="col-md-4 col-sm-12">	
+									
+									<div class="form-group" >
+										<label for="academic" class="col-md-6 col-sm-6 control-label">Spacing: <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="Select the spacing to be used in your paper"></span>
+										</label>
+										<div class="row" >
+											<div class="col-md-6 col-sm-6 " >
+											
+											<select id="deadline" style="width: 140px;"  onchange="getValuesfromFields();calculateTotal();" name='spacing' required="true" class="form-control">
+												<option value="Double Spacing">Double Spaced</option>
+												<option value="Single Spacing">Single Spaced</option>
+												<
+										</select>
+								
+		
+											</div>
+											
+										</div>
+																				
+	
+	
+									</div>
+									</div>
+									</div>
+									
+										<hr />
+									<!--<div class="form-group">			
+   
+										
+										<b><label class="col-sm-3 control-label"  >Discount Code:</label></b>
+										<div class="col-sm-9">
+										<div id="button" href="#">
+    <input type="checkbox" name="discount" onclick="calculateTotal();" class="check" id="discount">Get 15% Discount
+</div>​
+<div id="savedM" href="#">
+
+    </div>​
+								
+										</div>
+								
+									
+									</div>-->
+									
+									
+								</div>
+								<div class="form-group"  id="smallId">
+										<label class="col-sm-3 control-label">Additional materials : <span class="glyphicon glyphicon-info-sign red-tooltip" data-toggle="tooltip" data-placement="top" title="You can upload books, articles, frontend/images, instructions from your professor or anything that can help us complete the assignment."></span></label>	
+										<div class="col-sm-9">
+											
+											<label class="btn btn-default" style="margin-bottom: 5px;" >
+												<input name="file1" type="file">
+												<!--<i class="fa_icon icon-upload-alt margin-correction"></i>upload file-->
+											</label>
+											
+											<label class="btn btn-default" style="margin-bottom: 5px;" >
+												<input name="file2" type="file">
+												<!--<i class="fa_icon icon-upload-alt margin-correction"></i>upload file-->
+											</label>
+											<label class="btn btn-default" style="margin-bottom: 5px;" >
+												<input name="file3" type="file">
+												<!--<i class="fa_icon icon-upload-alt margin-correction"></i>upload file-->
+											</label>
+											<label class="btn btn-default" style="margin-bottom: 5px;" >
+												<input name="file4" type="file">
+												<!--<i class="fa_icon icon-upload-alt margin-correction"></i>upload file-->
+											</label>
+											<label class="btn btn-default"  style="margin-bottom: 5px;">
+												<input name="file5" type="file">
+												<!--<i class="fa_icon icon-upload-alt margin-correction"></i>upload file-->
+											</label>
+											<!--</span>-->
+							
+											<p class="errors"></p>
+																										
+										</div>			
+									</div>
+									<div class="form-group">			
+   
+										<input type="hidden" name="orderprice" id="calculatedPrice" />
+										<b><label class="col-sm-3 control-label"  >Total Price:</label></b>
+										<div class="col-sm-9">
+											<span id="totalPrice" style="color: #000;font-size: 24px; height: 50px;font-weight: bold; width: 100%; background-color: #ffd5cc; padding-top: 10px; text-align: center; " ></span>
+											
+								
+								
+										</div>
+								
+									
+									</div>
+								<div data-step="3" >
+								<table id="detailsTable" class="table table-bordered table-responsive " style="background: #fff;">
+										<tbody>
+											<tr>
+												<td>
+													<strong>Subject:</strong>
+												</td>
+												<td class="additional-pages" id="subjectP"></td>
+												<td>
+													<strong>Academic Level</strong>
+												</td>
+												<td class="additional-slides" id="alevelP"></td>
+             
+											</tr>
+		
+											<tr>
+												<td>
+													<strong>Style</strong>
+												</td>
+												<td>
+													<span id="serviceType"></span>
+												</td>
+												<td>
+													<strong>Spacing</strong>
+												</td>
+												<td>
+													<span id="workType"></span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<strong>Pages:</strong>
+												</td>
+												<td>
+													<span id="pages"></span>
+                                                  
+												</td>
+												<td>
+													<strong>Power point slides:</strong>
+												</td>
+												<td>
+													<span id="slidesttt"></span>
+                                                   
+												</td>
+											</tr>
+		
+                                          
+		
+											<tr>
+                                                
+												<td>
+													<strong>Paper Type:</strong>
+												</td>
+												<td>
+													<span id="pTyepS"></span>
+												</td>
+												<td>
+													<strong>Sources:</strong>
+												</td>
+												<td>
+													<span id="sourcesT"></span>
+												</td>
+											</tr>
+		
+											<tr>
+                                                
+												<td>
+													<strong>Dealine</strong>
+												</td>
+												<td>
+													<span id="deadT"></span>
+												</td>
+												<td>
+													<strong>Order Total</strong>
+												</td>
+												<td>
+													<b><span id="orderT" style="font-size: 14;color: #ff8065;">$ </span></b>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<strong>Topic:</strong>
+												</td>
+												<td colspan="3">
+													<span id="topicp"></span>
+												</td>
+											</tr>
+											
+											<tr>
+												<td>
+													<strong>Instructions:</strong>
+												</td>
+												<td colspan="3">
+													<span id="instructTT"></span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+				
+												</td>
+												<td colspan="3">
+													<span >
+														<p id = 'demo111' style="color: red;" ></p>
+												
+														
+														
+														<button class="btn btn-warning" id="submitO" onclick="submitForms();">Submit Order</button>
+														
+													</span>  
+													
+															
+															
+												</td>
+											</tr>
+		
+		
+		
+										
+										</tbody>
+									</table>
+					
+								</div>
+							
+										
+							</form>
+						</div>
+								
+								
+			
+			
+					</div>
+			
+
+
+<script>
+	CKEDITOR.replace( 'paperInstructions' );
+</script> 
+    
+<script src="frontend/js/libs/jquery.min.js"></script>
+     <script src="https://acemypapers.com/admin/js/bases.js"></script>   
+    <script src="https://acemypapers.com/admin/js/calcu.js"></script> 
+
+
+		
+<!-- /.content-wrapper -->
+					</div> <!-- container -->
+
+				</div> <!-- content -->
+
+				<footer class="footer text-right">
+					2013 - 2018 © Ace Mypapers. E-mail: support@support.com
+				</footer>
+
+			</div>
+
+
+			<!-- ============================================================== -->
+			<!-- End Right content here -->
+			<!-- ============================================================== -->
+
+
+            
+
+		</div>
+		<!-- END wrapper -->
+
+
+		<script>
+			var resizefunc = [];
+				$(window).load(function() {
+ getValuesfromFields();
+calculateTotal();
+});
+		</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/59e5eb45c28eca75e4626812/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+		<!-- jQuery  -->
+		<script src="https://acemypapers.com/backend/assets/js/jquery.min.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/bootstrap.min.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/detect.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/fastclick.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/jquery.blockUI.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/waves.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/jquery.slimscroll.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/jquery.scrollTo.min.js"></script>
+		
+		<script src="https://acemypapers.com/backend/assets/pages/jquery.dashboard.js"></script>
+
+		<!-- App js -->
+		<script src="https://acemypapers.com/backend/assets/js/jquery.core.js"></script>
+		<script src="https://acemypapers.com/backend/assets/js/jquery.app.js"></script>
+
+	</body>
+
+</html>
