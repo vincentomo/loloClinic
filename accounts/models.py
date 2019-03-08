@@ -32,8 +32,8 @@ class Doctor(models.Model):
 class Appointment(models.Model):
     title = models.CharField(max_length=80, null=False, blank=False)
     ref_code = models.CharField(max_length=20)
-    patient = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
-    doctor = models.OneToOneField(Doctor, on_delete=models.SET_NULL, null=True)
+    patient = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="booked_appointments")
+    doctor = models.ForeignKey(Doctor, on_delete=models.SET_NULL, null=True, related_name="appointments")
     description = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
