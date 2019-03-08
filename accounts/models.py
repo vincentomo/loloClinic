@@ -9,7 +9,7 @@ class User(models.Model):
     emailAddress = models.EmailField(max_length=60)
     password = models.CharField(max_length=100)
     profession = models.CharField(max_length=60)
-    country = models.CharField(max_length=20)
+    county = models.CharField(max_length=20)
 
     def __str__(self):
         return f"{self.firstName} {self.lastName} - {self.profession}"
@@ -23,7 +23,7 @@ class Doctor(models.Model):
     password = models.CharField(max_length=100)
     workgroup = models.CharField(max_length=10)
     speciality = models.CharField(max_length=60)
-    country = models.CharField(max_length=20)
+    county = models.CharField(max_length=20)
 
     def __str__(self):
         return f"{self.firstName} {self.lastName} - {self.speciality}"
