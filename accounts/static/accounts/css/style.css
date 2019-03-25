@@ -1,0 +1,10 @@
+body {
+    background-color: lightblue;
+    background-image: url('images/bg.jpg');
+}
+
+.button {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 70px;
+}

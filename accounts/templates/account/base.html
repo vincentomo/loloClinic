@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured academic writing system, which can be used to manager clients, writers and manage finance.">
+    <meta name="author" content="Coderthemes"> {% if title %}
+    <title>{{ title }}</title>
+    {% endif %}
+    <title>{% block head_title %} {% endblock %}</title>
+    <meta name="csrf-token" content="qtXSQwR5tKtIbAUpsSLJi94IXUpXj1eP6H9Zqkl0">
+    <link rel="stylesheet" href="{%  static 'accounts/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" , href="{% static 'accounts/css/style.css' %}"> </head>
+
+<body>
+    {% include 'account/navbar.html' %}
+    <div class="container theme-showcase" role="main">
+        <br>
+        <hr> {% block body %} {% endblock %}
+    </div>
+    <script>
+        var resizefunc = [];
+        $(window).load(function() {
+            getValuesfromFields();
+            calculateTotal();
+        });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/59e5eb45c28eca75e4626812/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <script src="{% static 'accounts/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.min.js' %}"></script>
+    <script src="{% static 'accounts/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

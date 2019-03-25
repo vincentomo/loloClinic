@@ -1,0 +1,13 @@
+{% extends 'account/base.html' %} {% block body %}
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <label>Your username: </label>
+        <label>{{ user.username }}</label>
+        <br>
+        <label>Your email: </label>
+        <label>{{ user.email }}</label>
+        <br>
+        <label>{{ user.profession }}</label>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+        <!--Logo-->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home' %}">LoLoClinic</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {% url 'home' as home %} {% url 'about' as about %} {% url 'contact' as contact %}
+                <li {% if request.path is home %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
+                <li {% if request.path is about %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
+                <li {% if request.path is contact %} class="active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {% if not user.is_authenticated %}
+                        <li><a href="{% url 'account_login' %}">Login</a></li>
+                        <li><a href="{% url 'account_signup' %}">Signup</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                        {% endif %}
+                        <li class="divider" role="separator"></li>
+                        <li class="dropdown-header">Settings</li>
+                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

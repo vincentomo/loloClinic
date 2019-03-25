@@ -1,47 +1,55 @@
 from django.contrib.auth import authenticate, logout, login
 from django.urls import reverse
-from django.shortcuts import render
-from django.http import HttpResponse, Http404
-from .models import User, Doctor, Appointment
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from .forms import RegistrationForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def accounts(request):
-    if not request.user.authenticated:
-        return render(request, 'accounts/login.html', {"message": None})
+    if not request.user.is_authenticated:
+        return render(request, 'account/login.html', {"message": None})
     context = {
-        "user": user.request
+        "user": request.user
     }
-    return render(request, 'accounts/index.html', context=context)
-def login(request):
-    email = request.POST["email"]
-    password = request.POST["password"]
+    return render(request, 'account/index.html', context=context)
+def user_login(request):
+    email = request.POST['email']
+    password = request.POST['password']
 
-    user = authenticate(request, email=email, password = password)
+    user = authenticate(request,  email=email, password=password)
+    #return render(request, "accounts/userlogin.html")
 
-    if user is None:
-        return render(request, "accounts/login.html", {"message": "Invalid Credentials"})
-    else:
-        login(request, user)
-        return HttpResponseRedirect(reverse('home'))
-
-def logout(request):
+def user_logout(request):
     logout(request)
-    return render(request, "accounts/login.html", {"message": "Logged out Successfully!"})
-    
+    return render(request, "account/login.html", {"message": "Logged out Successfully!"})
 
+def  adduser(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
 
-def book(request, user_id ):
-    try:
-        doctor_id = int (request.POST['doctor'])
-        user = User.objects.get(pk=user_id)
-        doctor = Doctor.objects.get(pk=doctor_id)
-    except KeyError:
-        return render(request, 'accounts/error.html', {"message": "Make Sure you Select Doctor and User"})
-    except User.DoesNotExist:
-        return render(request, 'accounts/error.html', {"message": "No user."})
-    except Doctor.DoesNotExist:
-        return render(request, 'accounts/error.html', {"message": "No Doctor."})
-    
+        if form.is_valid:
+            form.save()
+            return render(request, 'account/login.html')
+    else:
+        form = RegistrationForm()
+        context = {
+            "form": form
+        }
+        return render(request, 'account/addUser.html', context)
+def about(request):
+    context = {
+        "title": "About Us",
+    }
+    return render(request, 'account/about.html', context)
 
-
+@login_required
+def userProfile(request):
+    user = request.user
+    title = "Profile"
+    context = {
+        "user": user,
+        'title': title
+    }
+    return render(request, 'account/profile.html', context)
