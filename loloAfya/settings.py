@@ -25,7 +25,7 @@ SECRET_KEY = '3*2!rqvs_m@+)$1i1qyfw0ukf!s*5f8rr#7evsify5rq4h2v3r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['larntechelectronics.pythonanywhere.com']
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'larn.lazygeek@gmail.com'
 EMAIL_HOST_PASSWORD = 'michael12'
@@ -98,10 +98,10 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'loloafya',
-        'USER': 'vincentomo',
+        'NAME': 'larntechelectron$loloafya',
+        'USER': 'larntechelectron',
         'PASSWORD': 'michael12',
-        'HOST': 'vincentomo.mysql.pythonanywhere-services.com',
+        'HOST': 'larntechelectronics.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
@@ -145,14 +145,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if DEBUG:
-    MEDIA_URL ='/media/'
-    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static-only")
-    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+STATIC_ROOT ='/home/larntechelectronics/loloClinic/static'
 
-    STATICFILES_DIR = (
-        os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
-    )
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 SITE_ID = 1
@@ -175,13 +169,13 @@ ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_LOGOUT_REDIRECT_URL = LOGIN_URL
 ACCOUNT_SIGNUP_FORM_CLASS = None
 ACCOUNT_SIGNUP_PASSWORD_VERIFICATION = True
-ACCOUNT_UNIQUE_EMAIL = True 
+ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = "username"
 ACCOUNT_USER_MODEL_EMAIL_FIELD = "email"
 
 ACCOUNT_USERNAME_MIN_LENGTH = 5
 ACCOUNT_USERNAME_BLACKLIST = []
-ACCOUNT_USERNAME_REQUIRED = True 
-ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False 
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_PASSWORD_MIN_LENGTH = 6
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
