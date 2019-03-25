@@ -38,7 +38,6 @@ EMAIL_USE_TLS = True
 INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'accounts.apps.AccountsConfig',
-    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -100,9 +99,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'loloafya',
-        'USER': 'root',
+        'USER': 'vincentomo',
         'PASSWORD': 'michael12',
-        'HOST': '127.0.0.1',
+        'HOST': 'vincentomo.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
